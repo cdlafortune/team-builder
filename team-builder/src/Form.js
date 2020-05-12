@@ -22,7 +22,7 @@ export default function Form(props) {
 
     return (
         <form className="form" onSubmit={submitForm}>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Name </label>
             <input 
                 onChange={changeHandler}
                 id="name"
@@ -31,8 +31,9 @@ export default function Form(props) {
                 placeholder="John Smith"
                 value={member.name}
             />
+            <br/>
 
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email </label>
             <input 
                 onChange={changeHandler}
                 id="email"
@@ -41,8 +42,9 @@ export default function Form(props) {
                 placeholder="jsmith@example.com"
                 value={member.email}
             />
+            <br/>
             
-            <label htmlFor="role">Role</label>
+            <label htmlFor="role">Role </label>
             <input 
                 onChange={changeHandler}
                 id="role"
@@ -51,6 +53,7 @@ export default function Form(props) {
                 placeholder="Front End Developer"
                 value={member.role}
             />
+            <br/>
 
             <button type="submit">Submit</button>
 

@@ -34,10 +34,12 @@ function App() {
   };
 
   return (
-    <Router className="app">
-      <h1>My Team</h1>
-      <Form addMember={addMember}/>
-      <MemberCard members={team} />
+    <Router>
+      <div className="app">
+        <h1>My Team</h1>
+        <Form addMember={addMember}/>
+        <MemberCard members={team} />
+      </div>
     </Router>
   );
 }
