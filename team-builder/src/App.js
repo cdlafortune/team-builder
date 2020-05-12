@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import MemberCard from './MemberCard';
+import Form from './Form';
 
 function App() {
   const  [team, setTeam] = useState([
@@ -31,22 +32,11 @@ function App() {
     };
     setTeam([...team, newMember]);
   };
-  
-  const changeHandler = e => {
-    setMember({...member, [e.target.name]: e.target.value});
-    console.log(member);
-  };
-
-  const submitForm = e => {
-      event.preventDefault();
-      props.addMember(member);
-      setMember({name:"", email:"", role:""});
-  };
 
   return (
     <Router className="app">
       <h1>My Team</h1>
-      <Form changeHandler={changeHandler} submitForm={submitForm} addMember={addMember}/>
+      <Form addMember={addMember}/>
       <MemberCard members={team} />
     </Router>
   );
